@@ -89,21 +89,22 @@ footer {
   background-color: rgb(47, 211, 55);
 }
 
-.lateral-menu{
+.lateral-menu {
+  display: none;
+}
+
+.flex-laptop-section {
   display: none;
 }
 /*Tablet*/
 @media (min-width: 576) {
   .flex-movile-section {
-    display: none;    
-  } 
-  
-
+    display: none;
+  }
 }
 
 /*PC*/
 @media (min-width: 992px) {
-
   main {
     display: grid;
     grid-template-areas:
@@ -119,20 +120,26 @@ footer {
       75vh
       8vh;
   }
-
-  .lateral-menu{
+  header {
+    grid-area: header;
+    background-color: rgb(47, 211, 55);
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+  }
+  .lateral-menu {
     display: flex;
   }
 
-  .lateral-menu li{
+  .lateral-menu li {
     display: flex;
     justify-content: center;
     list-style: none;
   }
 
   .flex-movile-section {
-    display: none;    
-  }  
+    display: none;
+  }
 
   .flex-footer {
     display: flex;
@@ -140,13 +147,22 @@ footer {
     align-items: center;
     flex-flow: column wrap;
     background-color: rgb(47, 211, 55);    
+    width: 20%;
+    position: fixed;
   }
   .flex-footer-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(47, 211, 55);
+    background-color: rgb(47, 211, 55);  
+    width: 20%;
+    position: fixed;
+  }
+
+  .flex-laptop-section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin: 2%;
   }
 }
-
-
